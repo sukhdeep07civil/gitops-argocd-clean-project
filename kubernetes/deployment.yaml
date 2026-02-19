@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gitops-app
-          image: ssm0712/gitops-argocd-clean-project:63b4aa8825e949eded0ce7cdf3920dc59572eba8
+          image: ssm0712/gitops-argocd-clean-project:9cdf15e276fc1f42577370dc10abb71c4f209730
           ports:
           - containerPort: 3000
           resources:
