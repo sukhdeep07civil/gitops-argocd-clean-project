@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-clean-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gitops-clean
+  template:
+    metadata:
+      labels:
+        app: gitops-clean
+    spec:
+      containers:
+        - name: gitops-app
+          image: ssm0712/gitops-argocd-clean-project:latest
+          ports:
+          - containerPort: 3000
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
