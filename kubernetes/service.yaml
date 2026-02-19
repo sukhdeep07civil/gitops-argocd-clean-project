@@ -6,6 +6,7 @@ spec:
   selector:
     app: gitops-clean
   type: NodePort
+  
   ports:
   - port: 80
     targetPort: 3000
